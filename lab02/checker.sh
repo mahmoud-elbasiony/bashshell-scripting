@@ -75,10 +75,12 @@ function checkFloatPoint {
 ##Functionm accepts a value, return 0 if valid email address, 1 not
 function checkEMail {
         VAL=${1}
-        if [ $(echo ${VAL} | grep -c "^[a-zA-Z]\{1\}[a-zA-Z0-9]\{1,\}\@\{1\}[a-zA-Z]\{1,\}\.{1\}[a-zA-Z]\{1,\}") -eq 1 ]
+        if [ $(echo ${VAL} | grep -c "^[a-zA-Z]\{1,\}[a-zA-Z0-9]\{1,\}\@\{1\}[a-zA-Z]\{1,\}\.\{1\}[a-zA-Z]\{1,\}") -eq 1 ]
         then
+		echo "VALID"
                 return 0
         else
+		echo "not VALID"
                 return 1
         fi
 }

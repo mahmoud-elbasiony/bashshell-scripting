@@ -2,6 +2,7 @@
 source menu.sh
 source checker.sh
 checkFile datafile
+
 if [ ${?} -ne 0 ]
 then
 	echo "Can not find datafile"
@@ -19,6 +20,7 @@ then
         echo "Can write to datafile"
 	exit 3
 fi
+
 
 runMenu
 exit 0
